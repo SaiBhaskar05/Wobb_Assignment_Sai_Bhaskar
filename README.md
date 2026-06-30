@@ -1,5 +1,7 @@
 # Wobb Assignment - Submission
 
+- Link: https://wobb-assignment-sai-bhaskar.vercel.app/
+
 This repository contains the fully refactored, optimized, and redesigned Influencer Search Application for the Wobb Frontend Assignment.
 
 ## 🛠️ Key Improvements & Features Implemented
