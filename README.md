@@ -1,4 +1,4 @@
-# Wobb Frontend Assignment - Submission
+# Wobb Assignment - Submission
 
 This repository contains the fully refactored, optimized, and redesigned Influencer Search Application for the Wobb Frontend Assignment.
 
