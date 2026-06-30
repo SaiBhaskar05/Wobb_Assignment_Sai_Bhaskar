@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Claymorphism Light Theme Variables */
+  --bg-app: #f2f5fa;
+  --bg-surface: rgba(255, 255, 255, 0.65);
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-tertiary: #94a3b8;
+  
+  /* Soft claymorphic borders and shadows */
+  --clay-border: rgba(255, 255, 255, 0.7);
+  --clay-shadow-outer: 12px 12px 28px rgba(165, 180, 252, 0.22), 
+                       -8px -8px 20px rgba(255, 255, 255, 0.8);
+  --clay-shadow-inner: inset 4px 4px 10px rgba(255, 255, 255, 0.95), 
+                       inset -4px -4px 10px rgba(165, 180, 252, 0.15);
+
+  font-family: var(--font-sans);
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+/* Claymorphic Layout Panel */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--clay-border);
+  border-radius: 1.75rem;
+  box-shadow: var(--clay-shadow-outer), var(--clay-shadow-inner);
+}
+
+/* Claymorphic Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 1.5rem;
+  box-shadow: 8px 8px 24px rgba(165, 180, 252, 0.18),
+              inset 3px 3px 6px rgba(255, 255, 255, 0.95),
+              inset -3px -3px 6px rgba(165, 180, 252, 0.08);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(255, 255, 255, 1);
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 12px 16px 36px rgba(168, 85, 247, 0.14),
+              inset 4px 4px 8px rgba(255, 255, 255, 0.98),
+              inset -4px -4px 8px rgba(168, 85, 247, 0.05);
+}
+
+/* Highlighted Clay Search Input */
+.glow-input {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1.5px solid rgba(168, 85, 247, 0.25);
+  box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.02),
+              3px 3px 12px rgba(168, 85, 247, 0.05);
+  color: var(--text-primary);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glow-input:focus {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(168, 85, 247, 0.55);
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.01),
+              0 0 20px rgba(168, 85, 247, 0.15),
+              4px 4px 16px rgba(168, 85, 247, 0.08);
+}
+
+/* Glowing text - Soft cinematic styling for light theme */
+.cinematic-glow {
+  text-shadow: 0 4px 12px rgba(168, 85, 247, 0.15);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(165, 180, 252, 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(165, 180, 252, 0.5);
+}
+
+/* 2D Orbital and Floating Animations */
+@keyframes float-orbit-1 {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -45px) scale(1.1); }
+  66% { transform: translate(-25px, 25px) scale(0.95); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+@keyframes float-orbit-2 {
+  0% { transform: translate(0px, 0px) scale(1.1); }
+  50% { transform: translate(-40px, 40px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1.1); }
+}
+
+.animate-float-1 {
+  animation: float-orbit-1 16s ease-in-out infinite;
+}
+
+.animate-float-2 {
+  animation: float-orbit-2 22s ease-in-out infinite;
+}
+
+/* Entrance Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
